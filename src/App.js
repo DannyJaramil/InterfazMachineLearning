@@ -23,7 +23,7 @@ function App() {
         method: "POST",
         mode: 'cors',
         headers: {
-          'Access-Control-Allow-Origin': 'https://apiia.herokuapp.com/predict/api/predict',
+          'Access-Control-Allow-Origin': 'https://apiia.herokuapp.com/api/predict', 
           'Accept': 'application/json'
         },
         body: formData
