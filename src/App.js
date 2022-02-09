@@ -7,10 +7,7 @@ import swal from 'sweetalert';
 function App() {
 
   const eventSubmit = (event) => {
-
     PeticionPut().then();
-
-
     event.preventDefault();
   }
   
@@ -21,7 +18,7 @@ function App() {
     let formData = new FormData();
     formData.append('anio', anio);
     formData.append('mes', mes);
-    await fetch('predict',
+    await fetch('/predict',
       {
         method: "POST",
         mode: 'cors',
@@ -30,7 +27,7 @@ function App() {
           'Accept': 'application/json'
         },
         body: formData
-      }).then( (response) => response.json().then((response) => { mostrarAlerta(response.prediccion) }));
+      }).then( response => response.text()).then( res => {mostrarAlerta(res)});
   }
 
   const mostrarAlerta = (a) => {
