@@ -27,10 +27,10 @@ function App() {
         mode: 'cors',
         headers: {
           'Access-Control-Allow-Origin': 'https://apiia.herokuapp.com/',
+          'Accept': 'application/json'
         },
         body: formData
-
-      }).then(response => response.json()).then(data => { mostrarAlerta(data.prediccion) });
+      }).then( (response) => response.json()).then((data) => { mostrarAlerta(data.prediccion) });
   }
 
   const mostrarAlerta = (a) => {
