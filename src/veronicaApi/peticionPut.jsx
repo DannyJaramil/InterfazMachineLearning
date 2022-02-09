@@ -29,9 +29,7 @@ export const PeticionPut = async (props) => {
             method: "POST",
             mode: 'cors',
             headers: {
-
-                'Access-Control-Allow-Origin': 'http://localhost:8080/',
-               
+                'Access-Control-Allow-Origin': 'https://apiia.herokuapp.com/',        
             },
             body:formData
 
