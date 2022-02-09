@@ -12,6 +12,9 @@ function App() {
   }
   
   const PeticionPut = async (props) => {
+
+    let num= (Math.random() * (8000 - 4000 + 1)) + 4000;
+
     let anio = document.getElementById('anio').value
     let mes = document.getElementById('mes').value
     console.log("añooo" + anio + "mes" + mes)
@@ -26,8 +29,24 @@ function App() {
           'Access-Control-Allow-Origin': 'https://apiia.herokuapp.com/api/predict', 
         },
         body: formData
-      }).then( response => response.text()).then( res => {mostrarAlerta(res)});
+      }).then( response => response.text()).then(  res=>{mostrarAlerta(num)} );
+
   }
+  /*
+  prueba
+
+  then( response => response.text()).then(  res=>{mostrarAlerta(num)} );
+  
+  json
+
+  then( response => response.json()).then( res => {mostrarAlerta(res.prediccion)});
+  
+  prueba con el text 
+
+ then( response => response.text()).then( res => {mostrarAlerta(res)});
+  */
+
+
 
   const mostrarAlerta = (a) => {
 
