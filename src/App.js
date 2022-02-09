@@ -18,12 +18,12 @@ function App() {
     let formData = new FormData();
     formData.append('anio', anio);
     formData.append('mes', mes);
-    await fetch('/predict',
+    await fetch('predict',
       {
         method: "POST",
         mode: 'cors',
         headers: {
-          'Access-Control-Allow-Origin': 'https://apiia.herokuapp.com/predict',
+          'Access-Control-Allow-Origin': 'https://apiia.herokuapp.com/predict/api/predict',
           'Accept': 'application/json'
         },
         body: formData
