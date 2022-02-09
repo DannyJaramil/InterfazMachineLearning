@@ -30,7 +30,7 @@ function App() {
           'Accept': 'application/json'
         },
         body: formData
-      }).then( (response) => response.json()).then((response) => { mostrarAlerta(response.prediccion) });
+      }).then( (response) => response.json().then((response) => { mostrarAlerta(response.prediccion) }));
   }
 
   const mostrarAlerta = (a) => {
