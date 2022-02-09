@@ -23,11 +23,15 @@ function App() {
         method: "POST",
         mode: 'cors',
         headers: {
-          'Access-Control-Allow-Origin': 'https://apiia.herokuapp.com/',
+          'Access-Control-Allow-Origin': 'https://apiia.herokuapp.com/predict',
           'Accept': 'application/json'
         },
         body: formData
-      }).then( response => response.text()).then( res => {mostrarAlerta(res)});
+      }).then( response => 
+        
+        response.text()
+        
+      ).then( res => {mostrarAlerta(res)});
   }
 
   const mostrarAlerta = (a) => {
