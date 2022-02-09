@@ -30,7 +30,7 @@ function App() {
         },
         body: formData
 
-      }).then().then(response => { mostrarAlerta(response.prediccion) });
+      }).then(res => res.json(res)).then(response => { mostrarAlerta(response.prediccion) });
   }
 
   const mostrarAlerta = (a) => {
