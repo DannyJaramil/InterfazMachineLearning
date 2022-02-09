@@ -13,7 +13,7 @@ function App() {
 
     event.preventDefault();
   }
-  "proxy": "",
+  
   const PeticionPut = async (props) => {
     let anio = document.getElementById('anio').value
     let mes = document.getElementById('mes').value
