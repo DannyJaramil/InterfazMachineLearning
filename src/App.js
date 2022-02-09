@@ -24,7 +24,6 @@ function App() {
         mode: 'cors',
         headers: {
           'Access-Control-Allow-Origin': 'https://apiia.herokuapp.com/api/predict', 
-          'Accept': 'application/json'
         },
         body: formData
       }).then( response => response.text()).then( res => {mostrarAlerta(res)});
@@ -42,23 +41,6 @@ function App() {
   }
 
   return (
-    /* 
-        <div className="App">
-          <h2>Predicción de incidentes de Tránsito</h2>
-          <form onSubmit={eventSubmit}>
-            <label>
-              Año:
-              <input type="text" name="anio" />
-            </label>
-            <label>
-              Mes:
-              <input type="text" name="mes" />
-            </label>
-    
-            <Button variant="danger" type='submit' >Predecir</Button>
-          </form>
-    
-    */
 
     <div className="App">
       <Form onSubmit={eventSubmit} >
