@@ -13,7 +13,7 @@ function App() {
 
     event.preventDefault();
   }
-
+  "proxy": "",
   const PeticionPut = async (props) => {
     let anio = document.getElementById('anio').value
     let mes = document.getElementById('mes').value
@@ -21,7 +21,7 @@ function App() {
     let formData = new FormData();
     formData.append('anio', anio);
     formData.append('mes', mes);
-    await fetch('/predict',
+    await fetch('predict',
       {
         method: "POST",
         mode: 'cors',
