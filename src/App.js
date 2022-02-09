@@ -18,7 +18,7 @@ function App() {
     let formData = new FormData();
     formData.append('anio', anio);
     formData.append('mes', mes);
-    await fetch('predict',
+    await fetch('/api/predict',
       {
         method: "POST",
         mode: 'cors',
