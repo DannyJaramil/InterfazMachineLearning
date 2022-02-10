@@ -29,19 +29,34 @@ function App() {
           'Access-Control-Allow-Origin': 'https://apiia.herokuapp.com/api/predict', 
         },
         body: formData
-      }).then( response => response.text()).then(  res=>{mostrarAlerta(conDecimal)} );
+      }).then( response => response.json()).then( res => {
+        
+       let  a= res.prediccion;
+       var conDecimal = a.toFixed(0)
+       mostrarAlerta(conDecimal)
+       
+      }
+      );
 
   } 
   /*
   prueba
   let num= (Math.random() * (8000 - 4000 + 1)) + 4000;
   var conDecimal = num.toFixed(0)
-  then( response => response.text()).then(  res=>{mostrarAlerta(num)} );
+  then( response => response.text()).then(  res=>{mostrarAlerta(conDecimal)} );
   
   json
 
-  then( response => response.json()).then( res => {mostrarAlerta(res.prediccion)});
-  
+   
+  .then( response => response.json()).then( res => {
+        
+       let  a= res.prediccion;
+       var conDecimal = a.toFixed(0)
+       mostrarAlerta(conDecimal)
+       
+      }
+      );
+      
   prueba con el text 
 
  then( response => response.text()).then( res => {mostrarAlerta(res)});
