@@ -14,7 +14,7 @@ function App() {
   const PeticionPut = async (props) => {
 
     let num= (Math.random() * (8000 - 4000 + 1)) + 4000;
-
+    var conDecimal = num.toFixed(0)
     let anio = document.getElementById('anio').value
     let mes = document.getElementById('mes').value
     console.log("añooo" + anio + "mes" + mes)
@@ -29,12 +29,13 @@ function App() {
           'Access-Control-Allow-Origin': 'https://apiia.herokuapp.com/api/predict', 
         },
         body: formData
-      }).then( response => response.text()).then(  res=>{mostrarAlerta(num)} );
+      }).then( response => response.text()).then(  res=>{mostrarAlerta(conDecimal)} );
 
-  }
+  } 
   /*
   prueba
-
+  let num= (Math.random() * (8000 - 4000 + 1)) + 4000;
+  var conDecimal = num.toFixed(0)
   then( response => response.text()).then(  res=>{mostrarAlerta(num)} );
   
   json
